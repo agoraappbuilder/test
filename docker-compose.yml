@@ -6,8 +6,8 @@ services:
         depends_on:
             - database
         environment:
-            - APP_ID: $APP_ID
-            - APP_CERTIFICATE: $APP_CERTIFICATE
+            - APP_ID: dbd9325abd3040e4933d0c993e020fc5
+            - APP_CERTIFICATE: a4a39723644f4f1abda7d2e9cef4d2f8
             - CUSTOMER_ID: $CUSTOMER_ID
             - CUSTOMER_CERTIFICATE: $CUSTOMER_CERTIFICATE
             - BUCKET_NAME: $BUCKET_NAME
@@ -21,7 +21,7 @@ services:
             - ALLOWED_ORIGIN: ""
             - ENABLE_NEWRELIC_MONITORING: false
             - RUN_MIGRATION: true
-            - DATABASE_URL: postgresql://$POSTGRES_USER:$POSTGRES_PASSWORD@database:5432/$POSTGRES_DB?sslmode=disable
+            - DATABASE_URL: postgresql://agoratest:agoratest@database:5432/testdb?sslmode=disable
             - PORT: 8080
 
     database:
@@ -30,6 +30,6 @@ services:
         restart: always
         hostname: database
         environment: 
-            - POSTGRES_USER: $POSTGRES_USER
-            - POSTGRES_PASSWORD: $POSTGRES_PASSWORD
-            - POSTGRES_DB: $POSTGRES_DB
+            - POSTGRES_USER: agoratest
+            - POSTGRES_PASSWORD: agoratest
+            - POSTGRES_DB: testdb
