@@ -6,7 +6,7 @@ services:
         depends_on:
             - database
         environment:
-            - "APP_ID": "dbd9325abd3040e4933d0c993e020fc5"
+            - "APP_ID: dbd9325abd3040e4933d0c993e020fc5"
             - APP_CERTIFICATE: "a4a39723644f4f1abda7d2e9cef4d2f8"
             - CUSTOMER_ID: $CUSTOMER_ID
             - CUSTOMER_CERTIFICATE: $CUSTOMER_CERTIFICATE
