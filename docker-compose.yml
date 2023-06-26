@@ -16,7 +16,7 @@ services:
 
     database:
         container_name: server_database
-        image: postgres-12.4
+        image: postgres-latest
         restart: always
         hostname: database
         environment: 
