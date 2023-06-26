@@ -7,22 +7,12 @@ services:
             - database
         environment:
             - "APP_ID: dbd9325abd3040e4933d0c993e020fc5"
-            - APP_CERTIFICATE: "a4a39723644f4f1abda7d2e9cef4d2f8"
-            - CUSTOMER_ID: $CUSTOMER_ID
-            - CUSTOMER_CERTIFICATE: $CUSTOMER_CERTIFICATE
-            - BUCKET_NAME: $BUCKET_NAME
-            - BUCKET_ACCESS_KEY: $BUCKET_ACCESS_KEY
-            - BUCKET_ACCESS_SECRET: $BUCKET_ACCESS_SECRET
-            - CLIENT_ID: $CLIENT_ID
-            - CLIENT_SECRET: $CLIENT_SECRET
-            - PSTN_USERNAME: $PSTN_USERNAME
-            - PSTN_PASSWORD: $PSTN_PASSWORD
-            - SCHEME: $SCHEME
+            - "APP_CERTIFICATE: a4a39723644f4f1abda7d2e9cef4d2f8"
             - ALLOWED_ORIGIN: ""
             - ENABLE_NEWRELIC_MONITORING: false
             - RUN_MIGRATION: true
-            - DATABASE_URL: postgresql://agoratest:agoratest@database:5432/testdb?sslmode=disable
-            - PORT: 8080
+            - "DATABASE_URL: postgresql://agoratest:agoratest@database:5432/testdb?sslmode=disable"
+            - "PORT: 8080"
 
     database:
         container_name: server_database
@@ -30,6 +20,6 @@ services:
         restart: always
         hostname: database
         environment: 
-            - "POSTGRES_USER": "agoratest"
-            - POSTGRES_PASSWORD: "agoratest"
-            - POSTGRES_DB: "testdb"
+            - "POSTGRES_USER: agoratest"
+            - "POSTGRES_PASSWORD: agoratest"
+            - "POSTGRES_DB: testdb"
